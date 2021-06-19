@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import './Home.css';
-import fakeData from '../../FakeData/FakeData.json';
 import { Container, Grid, makeStyles, CssBaseline } from '@material-ui/core';
 import bgImage from '../../images/5487845.jpg'
 import BookSelect from '../BookSelect/BookSelect';
@@ -30,9 +29,13 @@ const Home = () => {
 
     const [books, setBooks] = useState([]);
     useEffect(() => {
-        setBooks(fakeData)
+        fetch('http://localhost:4000/books')
+        .then(res => res.json())
+        .then(data => {
+            setBooks(data)
+        })
     }, [])
-    console.log(books);
+    
     return (
 
         <div className={classes.root}>

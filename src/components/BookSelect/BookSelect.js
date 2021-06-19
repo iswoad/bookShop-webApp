@@ -25,7 +25,7 @@ const useStyles = makeStyles({
 const BookSelect = (props) => {
     
     const history = useHistory();
-    const {image, price, bookName, id} = props.book;
+    const {imageLink, price, name, id, aName} = props.book;
     
 
     const classes = useStyles();
@@ -42,20 +42,24 @@ const BookSelect = (props) => {
             <CardMedia
                 component="img"
                 className={classes.media}
-                alt={bookName}
-                image={image}
+                alt={name}
+                image={imageLink}
                 title=""
                 object-fit="contain"
             />
             
                 <CardContent>
-                    <Typography variant="body2" color="textSecondary" component="h5">
-                        {bookName}
+                    <Typography variant="body2" color="textSecondary" component="h3">
+                        <strong>{name}</strong>
                     </Typography>
-                    <Grid container>
+                    <Typography variant="body2" color="textSecondary" component="h6">
+                        {aName}
+                    </Typography>
+                    
+                    <Grid container spacing = {1}>
                         <Grid item xs={6}>
-                            <Typography variant="body2" color="textSecondary" component="p">
-                                {price}
+                            <Typography variant="body2" color="textSecondary" component="h6">
+                                Price:{price}$
                             </Typography>
                         </Grid>
                         <Grid item xs={6}>
