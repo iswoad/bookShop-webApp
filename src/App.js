@@ -10,6 +10,7 @@ import CheckOut from './components/CheckOut/CheckOut';
 import Login from './components/Login/Login';
 import { createContext, useState } from 'react';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Admin from './components/Admin/Admin';
 
 export const UserContext = createContext();
 
@@ -27,6 +28,9 @@ function App(props) {
           </Route>
           <Route path='/login'>
             <Login />
+          </Route>
+          <Route path='/admins'>
+            <Admin />
           </Route>
           <PrivateRoute path='/checkout/:bookId'>
             <CheckOut />
