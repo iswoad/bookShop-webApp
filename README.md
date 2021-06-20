@@ -1,10 +1,17 @@
-# Getting Started with Create React App
+# Full-stack bookyard bookshop project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+In this project the key features are:
+1. Loads data from mongodb database.
+2. Can add new books / product in database.
+3. Has a google sign in option along with new registration with email 
+    implemented by firebase authentiaction.
+4. Shows ordered items for a logged in user.
+5. Only a logged in user can choose a book and proceed further.
+Used: node.js to implement the backend. 
+Note: more features are yet to come.
 
-## Available Scripts
+live site link: https://ansary-s-bookyard.web.app/
 
-In the project directory, you can run:
 
 ### `npm start`
 
