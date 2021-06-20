@@ -32,7 +32,7 @@ function App(props) {
           <Route path='/admins'>
             <Admin />
           </Route>
-          <PrivateRoute path='/checkout/:bookId'>
+          <PrivateRoute path='/checkOut/:bookId'>
             <CheckOut />
           </PrivateRoute>
           <Route exact path='/'>

@@ -31,8 +31,8 @@ const BookSelect = (props) => {
     const classes = useStyles();
 
 
-    const handleBookSelect = () =>{
-        history.push(`/checkout/${_id}`)
+    const handleBookSelect = id =>{
+        history.push(`/checkOut/${id}`)
     }
 
 
