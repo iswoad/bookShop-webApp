@@ -17,7 +17,7 @@ const Admin = () => {
             price: data.bookPrice,
             imageLink: imageUrl
         }
-        const url = `http://localhost:4000/addBook`
+        const url = `https://mysterious-bayou-10236.herokuapp.com/addBook`
         console.log(bookData);
         fetch(url,{
             method: 'POST',

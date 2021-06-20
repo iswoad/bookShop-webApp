@@ -13,7 +13,7 @@ const CheckOut = () => {
     const [ loggedInUser, setLoggedInUser ] = useContext(UserContext);
 
     useEffect( () => {
-        fetch(`http://localhost:4000/book/${bookId}`)
+        fetch(`https://mysterious-bayou-10236.herokuapp.com/book/${bookId}`)
         .then(res => res.json())
         .then(data => setSelectedBook(data));
     }, [bookId])
@@ -26,7 +26,7 @@ const CheckOut = () => {
         const orderDetails = {...loggedInUser, boughtBook: selectedBook}
 
 
-        fetch('http://localhost:4000/addOrder', {
+        fetch('https://mysterious-bayou-10236.herokuapp.com/addOrder', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

@@ -30,9 +30,9 @@ function App(props) {
           <Route path='/login'>
             <Login />
           </Route>
-          <Route path='/admins'>
+          <PrivateRoute path='/admins'>
             <Admin />
-          </Route>
+          </PrivateRoute>
           <Route path = '/orders'>
             <Order />
           </Route>

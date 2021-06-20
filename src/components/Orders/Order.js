@@ -10,7 +10,7 @@ const Order = () => {
 
 
     useEffect( () => {
-        fetch('http://localhost:4000/orders?email='+loggedInUser.email)
+        fetch('https://mysterious-bayou-10236.herokuapp.com/orders?email='+loggedInUser.email)
         .then(res => res.json())
         .then(data => setOrders(data));
     },[])
