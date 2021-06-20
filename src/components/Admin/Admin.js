@@ -1,3 +1,4 @@
+import { Container } from '@material-ui/core';
 import axios from 'axios';
 import React from 'react';
 import { useState } from 'react';
@@ -46,23 +47,26 @@ const Admin = () => {
 
     return (
         <div>
+            <Container>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <h1>Book Name</h1>
-                <input type= "text" name="bookName" defaultValue="" {...register("bookName")}/>
+                <input style={{border: '2px solid black', padding: '10px', borderRadius: '5px'}} type= "text" name="bookName" defaultValue="" {...register("bookName")}/>
                 <br></br>
                 <h1>Author Name</h1>
-                <input type= "text" name="authorName" defaultValue="" {...register("authorName")}/>
+                <input style={{border: '2px solid black', padding: '10px', borderRadius: '5px'}} type= "text" name="authorName" defaultValue="" {...register("authorName")}/>
                 <br></br>
                 <h1>Book Price</h1>
-                <input type= "text" name="bookPrice" defaultValue="" {...register("bookPrice")} />
+                <input style={{border: '2px solid black', padding: '10px', borderRadius: '5px'}} type= "text" name="bookPrice" defaultValue="" {...register("bookPrice")} />
                 <br></br>
                 <h1>Book Image</h1>
-                <input type = "file" onChange = {handleImageUpload}/>
+                <input style={{border: '2px solid black', padding: '10px', borderRadius: '5px'}} type = "file" onChange = {handleImageUpload}/>
                 <br />
                 {errors.exampleRequired && <span>This field is required</span>}
                 <br />
-                <input type="submit" />
+                <input style={{border: '2px solid green', padding: '10px', borderRadius: '5px'}} type="submit" />
             </form>
+            </Container>
+            
         </div>
     );
 };

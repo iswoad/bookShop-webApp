@@ -25,14 +25,14 @@ const useStyles = makeStyles({
 const BookSelect = (props) => {
     
     const history = useHistory();
-    const {imageLink, price, name, id, aName} = props.book;
+    const {imageLink, price, name, _id, aName} = props.book;
     
 
     const classes = useStyles();
 
 
     const handleBookSelect = () =>{
-        history.push(`/checkout/${id}`)
+        history.push(`/checkout/${_id}`)
     }
 
 
@@ -63,7 +63,7 @@ const BookSelect = (props) => {
                             </Typography>
                         </Grid>
                         <Grid item xs={6}>
-                            <Button onClick = {() => handleBookSelect(id)} variant="contained" color="primary">
+                            <Button onClick = {() => handleBookSelect(_id)} variant="contained" color="primary">
                                 Buy Now
                             </Button>
                         </Grid>
